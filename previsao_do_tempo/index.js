@@ -1,6 +1,6 @@
 // const axios = require('axios')
 // const q = 'Itu'
-// const appId = '9bd1755e446b277d9ebc8900a79b6282'
+// const appId = ''
 // const cnt = '2'
 // const units = 'metric'
 // const baseUrl = 'api.openweathermap.org/data/2.5/forecast'
