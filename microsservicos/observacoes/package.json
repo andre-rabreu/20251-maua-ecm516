@@ -1,0 +1,19 @@
+{
+  "name": "observacoes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "node --watch index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "uuid": "^11.1.0"
+  }
+}
