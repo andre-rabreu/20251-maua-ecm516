@@ -4,6 +4,7 @@ const app = express()
 app.use(express.json())
 
 const eventos = []
+const hostname = 'host.docker.internal'
 
 // Definir um endpoint que viabilize a obtenção da coleção de eventos
 app.post("/eventos", async (req, res) => {
@@ -12,28 +13,28 @@ app.post("/eventos", async (req, res) => {
     eventos.push(evento)
 
     try{
-        await axios.post("http://localhost:4000/eventos", evento)
+        await axios.post(`http://${hostname}:4000/eventos`, evento)
     }
     catch(e){
         console.log(e)
     }
 
     try {
-        await axios.post("http://localhost:5000/eventos", evento)
+        await axios.post(`http://${hostname}:5001/eventos`, evento)
     }
     catch (e) {
         console.log(e)
     }
 
     try{
-        await axios.post("http://localhost:6000/eventos", evento)
+        await axios.post(`http://${hostname}:6000/eventos`, evento)
     }
     catch(e){
         console.log(e)
     }
 
     try {
-        await axios.post("http://localhost:7000/eventos", evento)
+        await axios.post(`http://${hostname}:7001/eventos`, evento)
     }
     catch(e) {
         console.log(e)

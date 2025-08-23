@@ -4,8 +4,8 @@ const { v4: uuidv4 } = require('uuid')
 const app = express()
 app.use(express.json())
 
-const baseUrl = "localhost"
-const barramento = "10000"
+const baseUrl = 'host.docker.internal'
+const barramento = '10000'
 
 const baseLembretes = {}
 

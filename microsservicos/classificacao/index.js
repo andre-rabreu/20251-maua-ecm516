@@ -2,8 +2,8 @@ const express = require("express")
 const app = express()
 app.use(express.json())
 
-const barramento = "10000"
-const baseUrl = "localhost"
+const barramento = '10000'
+const baseUrl = 'host.docker.internal'
 
 const palavraChave = "importante"
 const funcoes = {
@@ -33,7 +33,7 @@ app.post('/eventos', async function(req, res){
   }
 })
 
-const port = 7000
+const port = 7001
 app.listen(
   port, 
   () => console.log(`Classificação. Porta ${port}.`)
